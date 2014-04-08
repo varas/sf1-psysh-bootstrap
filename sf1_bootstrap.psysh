@@ -1,0 +1,6 @@
+<?php
+require_once 'config/ProjectConfiguration.class.php';
+$configuration = ProjectConfiguration::getApplicationConfiguration( 'APPLICATION_NAME', 'ENVIRONMENT_NAME', $debugFeatures = true);
+$context = sfContext::createInstance($configuration);
+new sfDatabaseManager($configuration);
+
